@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conscientização</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+
+body {
+    background: #0f172a;
+    color: white;
+    scroll-behavior: smooth;
+    letter-spacing: 1px; 
+}
+
+/* HEADER */
+header {
+    background: #020617;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* MENU */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MENU MOBILE */
+.menu-btn {
+    display: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* SEÇÕES */
+section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.container img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.box {
+    width: 50%;
+}
+
+/* TEXTOS */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #38bdf8;
+    font-size: 40px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #22c55e;
+    font-size: 30px;
+}
+
+p {
+    text-indent: 20px; 
+    text-align: justify;
+}
+
+li {
+    margin-bottom: 12px;
+    padding-left: 5px;
+    line-height: 1.4; 
+}
+
+ul {
+    margin-left: 20px;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #22c55e;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+@media(max-width: 768px){
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #020617;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container img,
+    .box {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#informações">Informações</a>
+        <a href="#efeitos">Efeitos</a>
+        <a href="#álcool">Álcool</a>
+        <a href="#cigarro">Cigarro</a>
+        <a href="#prevenção">Prevenção</a>
+        <a href="#tratamento">Tratamento</a>
+        <a href="#ajuda">Ajuda</a>
+    </nav>
+</header>
+
+<section id="inicio">
+<h1> Introdução</h1>
+<div class="container">
+
+<div class="box-sizing">
+<p> Vivemos em uma sociedade onde o contato com substâncias como álcool, cigarro e  outras podem acontecer cada vez mais cedo. Em sua maioria, esse contatou ocorre por conta de curiosidade, influência de amigos ou até para lidar com problemas sociais.
+Esse site tem como objetivo informar e conscientizar sobre os riscos do uso dessas substâncias, influenciando em escolhas mais saudáveis e responsáveis. </p>
+<a class="btn" href="#tratamento">Preciso de ajuda</a>
+</div>
+</div>
+</section>
+
+<section id="informações">
+<h2>Informações</h2>
+<div class="container">
+<img src="https://telemedicinamorsch.com.br/wp-content/uploads/2024/08/sistemas-de-informacoes-em-saude-telemedicina-morsch.jpg">
+<div class="box">
+<p> Substâncias psicoativas são aquelas que alteram o funcionamento do cérebro, interferindo nas emoções, no pensamento e no comportamento. Elas podem ser classificadas em: </p> 
+<ul>
+<li>Lícitas: álcool, cigarro e alguns medicamentos.</li>
+<li>Ilícitas: crack, maconha, heroina entre outos.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="efeitos">
+<h2>Efeitos em Geral </h2>
+<div class="container">
+<img src="https://www.shutterstock.com/image-photo/wasted-alcoholic-drug-addict-man-260nw-606366278.jpg">
+<div class="box">
+<ul>
+<li>Curto prazo: Sensação de prazer ou relaxamento, Alteração da percepção, Redução da coordenação motora, Aumento da impulsividade.</li>
+<li>Médio prazo: Problemas de memória, Mudanças de humor, Dificuldade de concentração.
+</li>
+<li>Longo prazo: Dependência, Problemas emocionais, Prejuízos à saúde física. </li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="álcool">
+<h2>Álcool</h2>
+<div class="container">
+<img src="https://hospitalsantamonica.com.br/wp-content/uploads/2018/03/sintomas-do-alcoolismo-que-indicam-que-e-hora-de-procurar-ajuda.jpg">
+<div class="box">
+<ul>
+O álcool está muito presente em festas e encontros sociais, mas seus efeitos podem ser prejudiciais, especialmente quando o uso começa cedo. 
+<li>Efeitos imediatos:
+Relaxamento e desinibição;
+Reflexos mais lentos;
+Falta de coordenação;
+Emoções exageradas.
+</li>
+<li>Efeitos a médio prazo:
+Sono desregulado;
+Irritação e instabilidade emocional;
+Problemas de memória.
+</li>
+<li>Efeitos a longo prazo:
+Danos ao fígado;
+Aumento da pressão arterial.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="cigarro">
+<h2>Cigarro</h2>
+<div class="container">
+<img src="https://st2.depositphotos.com/1012377/7243/i/450/depositphotos_72435341-stock-photo-man-smoking-a-cigarette.jpg">
+<div class="box">
+    <ul> <p>O cigarro contém nicotina, uma das substâncias mais viciantes existentes.
+</p>
+<li>Efeitos imediatos:
+Leve tontura;
+Alívio temporário da ansiedade;
+Aumento dos batimentos cardíacos.</li>
+<li>Efeitos a médio prazo:
+Tosse constante;
+Cansaço em atividades físicas;
+Irritação e nervosismo.</li>
+<li>Efeitos a longo prazo:
+Problemas respiratórios;
+Maior risco de câncer;
+Queda da imunidade;
+Dependência extrema.</li> 
+</ul>
+</div>
+</div>
+</section>
+
+<section id="prevenção">
+<h2>Prevenção </h2>
+<div class="container">
+<img src="https://blog.kompa.com.br/wp-content/uploads/2021/08/imgonline-com-ua-CompressToSize-08uDFnFOYWso.jpg">
+<div class="box">
+<ul>
+A prevenção começa com o cuidado com a saúde mental. Quando a pessoa aprende a entender suas emoções, lidar com o estresse e buscar apoio em momentos difíceis, diminui a chance de recorrer ao uso de substâncias como forma de escape.
+Manter uma rotina equilibrada também é fundamental. Ter um bom sono, uma alimentação adequada e relações sociais saudáveis fortalece o bem-estar e aumenta a qualidade de vida. Outras atitudes importantes incluem:
+<li>Conhecer os riscos do uso de substâncias.</li>
+<li>Evitar situações de pressão social.</li>
+<li>Estabelecer limites pessoais.</li>
+<li>Saber dizer “não” com firmeza.</li>
+<li>Buscar apoio de familiares ou profissionais da saúde.</li>
+
+</ul>
+</div>
+</div>
+</section>
+
+<section id="tratamento">
+<h2>Tratamento</h2>
+<div class="container">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+<div class="box">
+<p>O primeiro passo para o tratamento é reconhecer que precisa de ajuda. A partir disso, é fundamental buscar apoio de profissionais da saúde, como psicólogos e médicos, para entender a situação e iniciar o processo de recuperação.
+Os grupos de apoio são espaços seguros onde pessoas compartilham experiências, aprendem juntas e encontram acolhimento, sem julgamentos.
+
+Os Centros de Atenção Psicossocial (CAPS) são serviços públicos gratuitos que oferecem atendimento especializado para pessoas que enfrentam problemas com álcool, drogas ou saúde mental. O tratamento pode incluir:</p> 
+<ul>
+<li>Atendimento individual.</li>
+<li>Atividades em grupo.</li>
+<li>Oficinas terapêuticas.</li>
+<li>Acompanhamento médico (quando necessário).</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="ajuda">
+<h2>Ajuda</h2>
+<div class="container">
+<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d">
+<div class="box">
+<h3>Buscar ajuda é o primeiro passo.</h3>
+<a class="btn" href="https://www.google.com/search?q=CAPS+perto+de+mim" target="_blank">
+Encontrar ajuda
+</a>
+</div>
+</div>
+</section>
+
+
+<script>
+// MENU MOBILE
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+// ANIMAÇÃO AO ROLAR
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
